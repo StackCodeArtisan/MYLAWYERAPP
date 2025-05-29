@@ -1,0 +1,52 @@
+{% include 'landing_page/header.html' %}
+    
+        <div class="container">
+            <div class="row bod mb-2 mt-2">
+                <div class="col-md">
+                    <h1 id="lw" class="navbar-brand text-center">MY LAWYEr</h1>
+                </div>
+            </div>
+            <div class="row dob">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 align-items-center">
+                    <div class="row p-5">
+                        <div class="col-md">
+                            <h2>Admin Login <i class="fa-solid fa-lock"></i> </h2>
+                            {% set message = get_flashed_messages(with_categories=True) %}
+                            {% if message %}
+                            {% for msg , cat in message %}
+                                {% if cat == 'errormsg' %}
+                                <div class="alert alert-danger">{{msg}}</div>
+                                {% else %}
+                                <div class="alert alert-success">{{msg}}</div>
+                                {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            <form action="/admin/login/" method="post">
+                                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                                <label for="email" class="mb-2">Email</label>
+                                    <input type="text" class="form-control mb-4" id="email" name="email">
+                                    <label for="password" class="mb-2">Password</label>
+                                    <input type="password" class="form-control mb-4" id="password" name="password">
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button style="background-color: #F2F79E ;color: #092327;border: 1px solid #092327;" id="send" type="submit" class="btn btn-lg my-3">Login</button>
+                                    </div>
+                            </form>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+           <!---  footer  -->    
+           {% include 'landing_page/footer.html' %}
+
+
+    <script src="/static/script.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+        })
+    </script>
+</body>
+</html>

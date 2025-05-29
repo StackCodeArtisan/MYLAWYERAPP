@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="People can register on the platform as members and hire a professional lawyer">
+		<meta name="kewords" content="lawyer, legal, court, case, hire a lawyer, consultation">
+		<meta name="author" content="Olajosh">
+		<meta name="robots" content="index, follow">
+    <title>My LAWYEr</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.css">
+    <link
+    rel="stylesheet"
+    href="/static/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="/static/index.css">
+</head>
+<body class="">
+  <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md fixed-top custom-color">
+        <div class="container">
+          <a class="navbar-brand" href="#" style="color: #D64045">MYLAWYEr</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="/">Listings</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Contact</a>
+                </li>
+            </ul>
+            <div class="d-flex" role="search">
+              <a href="/profile/" class="btn btn-dark btn">Hi {{biz_deets.biz_name}}</a>
+              <a href="/register/" class="btn btn-dark btn ms-1" >Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="container-fluid ms-0 ps-0 mt-5 ">
+      <div class="row">
+        <div class="col-md-3 ">
+          <div class="d-flex flex-column flex-shrink-0 p-3 custom-color" style="width: 280px;height: 100vh;">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="/" class="nav-link custom-active" aria-current="page">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/"></use></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/profile/" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/profile/"></use></svg>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="/dashboard/" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/dashboard/"></use></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="/pay/" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/pay/"></use></svg>
+                  Make Payment
+                </a>
+              </li>
+              <li>
+                <a href="/category/" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  My Category
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 p-4">
+          {% block content %}
+         
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Listings</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 BizList, Inc</p>
+      </footer>
+    </div>
+              
+      
+      <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/jquery.js"></script>
+      <script>
+      $(document).ready(function(){
+
+          $(window).scroll(function(){
+            if($(window).scrollTop()>0){
+              $("nav").css("background-color","#0923276d");
+              $('.user-menu').css("background-color","transparent");
+            }else{
+            $("nav").css("background-color","#092327");
+            }
+          })
+
+});
+      </script>
+      </body>
+      </html>
